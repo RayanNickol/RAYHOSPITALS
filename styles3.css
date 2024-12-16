@@ -80,7 +80,7 @@ header nav ul li a:hover {
 
 .hero img {
     width: 100%;
-    height: 64%;
+    height: 70%;
     object-fit: cover; /* Ensures the image covers the entire hero section */
 }
 
@@ -104,7 +104,7 @@ header nav ul li a:hover {
     right: 2cm; /* Position 2cm to the left from the right edge */
     transform: translateY(-50%) translateY(calc(100% - height / 2)); /* Adjust vertical alignment */
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent box */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black box */
     padding: 40px 20px; /* Set the padding */
     border-radius: 5px;
     text-align: center;
@@ -117,62 +117,105 @@ header nav ul li a:hover {
 
 /* Services Section */
 .services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 40px;
-    margin-bottom: -50px;
-    min-width: 1024px; /* Prevent the section from shrinking */
-    margin-top: -250px;
-    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 20px;
+    margin-top: -300px; /* Remove negative margin */
+    background-color: #f9f9f9; /* Light grey background */
 }
 
-.service-box {
-    width: 28%;
+.services h2 {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 20px; /* Add padding inside the box */
-    border: 1px solid #d1bfa7; /* Light beige border */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
-    background-color: #fafafa; /* Very light gray background */
+    margin-bottom: 50px;
+    font-size: 36px;
+    margin-top: 0; /* Align the heading without negative margin */
+    color: #333; /* Darker text for contrast */
 }
 
-.service-box h2 {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-
-.service-box p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Registration Button Styles */
-.registration {
+.service-block {
     display: flex;
-    justify-content: flex-end; /* Align the button to the right */
-    padding: 20px 40px;
-    background-color: #f9f9f9; /* Very light gray background for contrast */
-    min-width: 1024px; /* Ensure consistent width */
+    flex-direction: column; /* Stack items on mobile */
+    gap: 40px; /* Add more space between service items */
 }
 
-.registration-btn {
-    display: inline-block;
-    background-color: #4e73df; /* Light gray button background */
-    color: #ffffff; /* Darker text color for contrast */
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-right: 16px;
+.service-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #ffffff; /* White background for each service item */
+    border: 1px solid #ddd; /* Light gray border for service items */
+    padding: 20px; /* Add padding inside each item */
 }
 
-.registration-btn:hover {
-    background-color: #b0b0b0; /* Slightly darker gray on hover */
+.service-item img {
+    width: 50%; /* Image takes up half the width */
+    height: auto; /* Keep the aspect ratio */
+    margin-right: 20px;
+    object-fit: cover;
 }
 
+.service-description {
+    flex-grow: 1;
+    padding-left: 20px;
+    width: 50%;
+    margin-top: 0; /* Remove negative margin */
+}
+
+.service-description h3 {
+    margin-bottom: 15px;
+    font-size: 24px; /* Slightly reduce the size for better alignment */
+    color: #2c3e50; /* Dark blue-gray color for headings */
+}
+
+.service-description p {
+    text-align: justify;
+    font-size: 21px; /* Reduce the paragraph size to make it more readable */
+    margin-top: 25px;
+    line-height: 2; /* Improve readability by increasing line spacing */
+    color: #666; /* Gray text for description */
+}
+
+/* Image & Paragraph Section */
+.image-para {
+    display: flex;
+    width: 100vw; /* Fullscreen width */
+    height: 50vh; /* Half the screen's height */
+    box-sizing: border-box;
+    background-color: #e8eaf6; /* Light blue for section background */
+}
+
+.text-block {
+    flex: 1; /* Take up half the screen width */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center the text */
+    padding: 20px; /* Add some padding for readability */
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Light grey background for text block */
+    color: #333; /* Dark text color for readability */
+}
+
+.text-block p {
+    font-size: 44px; /* Adjust text size */
+    margin-bottom: 15px;
+    font-style: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.image-block {
+    flex: 1; /* Take up half the screen width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure image doesn't overflow */
+    background-color: #b0bec5; /* Soft grey-blue background for the image block */
+}
+
+.image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
 
 
 /* Footer Styles */
@@ -211,4 +254,4 @@ footer .address img, footer .contact img {
 footer p {
     margin: 5px 0;
 }
-
+  

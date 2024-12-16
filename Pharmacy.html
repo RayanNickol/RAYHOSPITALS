@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmacy</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon icon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon icon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon icon/site.webmanifest">
     <link rel="mask-icon" href="images/favicon icon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles6.css">
+    <script src="script.js" defer></script>
 </head>
+<!DOCTYPE html>
 <body>
-        <!-- Header -->
+    <body>
         <header>
             <div class="logo">
                 <img src="images/Logo.png" alt="Logo">
@@ -31,73 +33,217 @@
                 </ul>
             </nav>
         </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/Pharmacy.jpg" alt="Wide Image">
-        <div class="hero-text">
-            <p>Medicine, the cure for anything.</p>
-        </div>
-    </section>
-
-    <main>
-        <section class="form-section">
-            <div class="form-container">
-                <form>
-                    <div class="form-header">
-                        <h2>Pharmacy Reservation Form</h2>
-                    </div>
     
-                    <div class="left-side">
-                        <label for="full-name">Full name</label>
-                        <input type="text" id="full-name" name="full-name">
-    
-                        <label for="dob">Date of birth</label>
-                        <input type="date" id="dob" name="dob">
-    
-                        <label for="contact-info">Contact information</label>
-                        <input type="text" id="contact-info" name="contact-info">
-    
-                        <label for="medicine">Medicine Selection</label>
-                        <select id="medicine" name="medicine">
-                            <option value="">Select Medicine</option>
-                            <option value="medicine1">Medicine 1</option>
-                            <option value="medicine2">Medicine 2</option>
-                            <option value="medicine3">Medicine 3</option>
-                        </select>
-    
-                        <label for="pickup-date">Preferred Pickup Date</label>
-                        <input type="date" id="pickup-date" name="pickup-date">
-    
-                        <label for="pickup-time">Preferred Pickup Time</label>
-                        <input type="time" id="pickup-time" name="pickup-time">
-    
-                        <label for="payment-method">Payment Method</label>
-                        <select id="payment-method" name="payment-method">
-                            <option value="">Select Payment Method</option>
-                            <option value="credit-card">Credit Card</option>
-                            <option value="cash">Cash</option>
-                            <option value="insurance">Insurance</option>
-                        </select>
-                    </div>
-    
-                    <!-- Buttons section -->
-                    <div class="form-buttons">
-                        <button type="submit">Submit</button>
-                        <button type="reset">Reset</button>
-                    </div>
-                </form>
+        <!-- Analgesics Category -->
+        <div id="category">
+            <h2>Analgesics</h2>
+            <div>
+                <label for="paracetamol">Paracetamol ($5): </label>
+                <input type="number" id="paracetamol" min="0" placeholder="0"><br>
+                <button onclick="addItem('Paracetamol', 5, 'paracetamol')">Add</button>
             </div>
-        </section>
-    </main>
+            <div>
+                <label for="ibuprofen">Ibuprofen ($8): </label>
+                <input type="number" id="ibuprofen" min="0" placeholder="0"><br>
+                <button onclick="addItem('Ibuprofen', 8, 'ibuprofen')">Add</button>
+            </div>
+            <div>
+                <label for="aspirin">Aspirin ($7): </label>
+                <input type="number" id="aspirin" min="0" placeholder="0"><br>
+                <button onclick="addItem('Aspirin', 7, 'aspirin')">Add</button>
+            </div>
+            <div>
+                <label for="naproxen">Naproxen ($10): </label>
+                <input type="number" id="naproxen" min="0" placeholder="0"><br>
+                <button onclick="addItem('Naproxen', 10, 'naproxen')">Add</button>
+            </div>
+            <div>
+                <label for="diclofenac">Diclofenac ($6): </label>
+                <input type="number" id="diclofenac" min="0" placeholder="0"><br>
+                <button onclick="addItem('Diclofenac', 6, 'diclofenac')">Add</button>
+            </div>
+            <div>
+                <label for="ketorolac">Ketorolac ($12): </label>
+                <input type="number" id="ketorolac" min="0" placeholder="0"><br>
+                <button onclick="addItem('Ketorolac', 12, 'ketorolac')">Add</button>
+            </div>
+        </div>
     
+        <!-- Antibiotics Category -->
+        <div id="category1">
+            <h2>Antibiotics</h2>
+            <div>
+                <label for="amoxicillin">Amoxicillin ($6): </label>
+                <input type="number" id="amoxicillin" min="0" placeholder="0"><br>
+                <button onclick="addItem('Amoxicillin', 6, 'amoxicillin')">Add</button>
+            </div>
+            <div>
+                <label for="azithromycin">Azithromycin ($10): </label>
+                <input type="number" id="azithromycin" min="0" placeholder="0"><br>
+                <button onclick="addItem('Azithromycin', 10, 'azithromycin')">Add</button>
+            </div>
+            <div>
+                <label for="doxycycline">Doxycycline ($8): </label>
+                <input type="number" id="doxycycline" min="0" placeholder="0"><br>
+                <button onclick="addItem('Doxycycline', 8, 'doxycycline')">Add</button>
+            </div>
+            <div>
+                <label for="ciprofloxacin">Ciprofloxacin ($12): </label>
+                <input type="number" id="ciprofloxacin" min="0" placeholder="0"><br>
+                <button onclick="addItem('Ciprofloxacin', 12, 'ciprofloxacin')">Add</button>
+            </div>
+            <div>
+                <label for="clindamycin">Clindamycin ($7): </label>
+                <input type="number" id="clindamycin" min="0" placeholder="0"><br>
+                <button onclick="addItem('Clindamycin', 7, 'clindamycin')">Add</button>
+            </div>
+            <div>
+                <label for="metronidazole">Metronidazole ($9): </label>
+                <input type="number" id="metronidazole" min="0" placeholder="0"><br>
+                <button onclick="addItem('Metronidazole', 9, 'metronidazole')">Add</button>
+            </div>
+        </div>
+    
+        <!-- Antidepressants Category -->
+        <div id="category2">
+            <h2>Antidepressants</h2>
+            <div>
+                <label for="sertraline">Sertraline ($15): </label>
+                <input type="number" id="sertraline" min="0" placeholder="0"><br>
+                <button onclick="addItem('Sertraline', 15, 'sertraline')">Add</button>
+            </div>
+            <div>
+                <label for="fluoxetine">Fluoxetine ($12): </label>
+                <input type="number" id="fluoxetine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Fluoxetine', 12, 'fluoxetine')">Add</button>
+            </div>
+            <div>
+                <label for="citalopram">Citalopram ($10): </label>
+                <input type="number" id="citalopram" min="0" placeholder="0"><br>
+                <button onclick="addItem('Citalopram', 10, 'citalopram')">Add</button>
+            </div>
+            <div>
+                <label for="venlafaxine">Venlafaxine ($18): </label>
+                <input type="number" id="venlafaxine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Venlafaxine', 18, 'venlafaxine')">Add</button>
+            </div>
+            <div>
+                <label for="bupropion">Bupropion ($20): </label>
+                <input type="number" id="bupropion" min="0" placeholder="0"><br>
+                <button onclick="addItem('Bupropion', 20, 'bupropion')">Add</button>
+            </div>
+            <div>
+                <label for="mirtazapine">Mirtazapine ($25): </label>
+                <input type="number" id="mirtazapine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Mirtazapine', 25, 'mirtazapine')">Add</button>
+            </div>
+        </div>
+    
+        <!-- Antihistamines Category -->
+        <div id="category3">
+            <h2>Antihistamines</h2>
+            <div>
+                <label for="loratadine">Loratadine ($8): </label>
+                <input type="number" id="loratadine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Loratadine', 8, 'loratadine')">Add</button>
+            </div>
+            <div>
+                <label for="cetirizine">Cetirizine ($9): </label>
+                <input type="number" id="cetirizine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Cetirizine', 9, 'cetirizine')">Add</button>
+            </div>
+            <div>
+                <label for="fexofenadine">Fexofenadine ($11): </label>
+                <input type="number" id="fexofenadine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Fexofenadine', 11, 'fexofenadine')">Add</button>
+            </div>
+            <div>
+                <label for="desloratadine">Desloratadine ($12): </label>
+                <input type="number" id="desloratadine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Desloratadine', 12, 'desloratadine')">Add</button>
+            </div>
+            <div>
+                <label for="levocetirizine">Levocetirizine ($14): </label>
+                <input type="number" id="levocetirizine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Levocetirizine', 14, 'levocetirizine')">Add</button>
+            </div>
+            <div>
+                <label for="chlorpheniramine">Chlorpheniramine ($5): </label>
+                <input type="number" id="chlorpheniramine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Chlorpheniramine', 5, 'chlorpheniramine')">Add</button>
+            </div>
+        </div>
+    
+        <!-- Antihypertensives Category -->
+        <div id="category4">
+            <h2>Antihypertensives</h2>
+            <div>
+                <label for="amlodipine">Amlodipine ($9): </label>
+                <input type="number" id="amlodipine" min="0" placeholder="0"><br>
+                <button onclick="addItem('Amlodipine', 9, 'amlodipine')">Add</button>
+            </div>
+            <div>
+                <label for="lisinopril">Lisinopril ($8): </label>
+                <input type="number" id="lisinopril" min="0" placeholder="0"><br>
+                <button onclick="addItem('Lisinopril', 8, 'lisinopril')">Add</button>
+            </div>
+            <div>
+                <label for="atenolol">Atenolol ($6): </label>
+                <input type="number" id="atenolol" min="0" placeholder="0"><br>
+                <button onclick="addItem('Atenolol', 6, 'atenolol')">Add</button>
+            </div>
+            <div>
+                <label for="losartan">Losartan ($10): </label>
+                <input type="number" id="losartan" min="0" placeholder="0"><br>
+                <button onclick="addItem('Losartan', 10, 'losartan')">Add</button>
+            </div>
+            <div>
+                <label for="hydrochlorothiazide">Hydrochlorothiazide ($7): </label>
+                <input type="number" id="hydrochlorothiazide" min="0" placeholder="0"><br>
+                <button onclick="addItem('Hydrochlorothiazide', 7, 'hydrochlorothiazide')">Add</button>
+            </div>
+            <div>
+                <label for="metoprolol">Metoprolol ($5): </label>
+                <input type="number" id="metoprolol" min="0" placeholder="0"><br>
+                <button onclick="addItem('Metoprolol', 5, 'metoprolol')">Add</button>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    <h2>Selected Items</h2>
+    <table id="orderTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Price</td>
+                <td id="totalPrice">$0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="btns">
+        <button onclick="saveAsFavourite()">Add to Favourites</button>
+        <button onclick="applyFavourites()">Apply Favourites</button>
+        <button onclick="resetOrder()">Reset</button>
+        <button onclick="goToPayment()">Buy Now</button>
+    </div>
+
+    <script src="script.js"></script>
 
     <footer>
         <div class="footer-container">
             <div class="logo">
                 <img src="images/Logo.png" alt="Logo">
             </div>
-    
             <div class="social-media">
                 <a href="https://www.instagram.com" target="_blank">
                     <img src="images/instagram.png" alt="Instagram">
@@ -112,17 +258,14 @@
                     <img src="images/twitterX.png" alt="Twitter">
                 </a>
             </div>
-    
             <div class="address">
                 <p>123 Hospital Road</p>
                 <p>
                     <a href="https://rayhospitals.com">RAYhospitals</a>
-                        Nuwara Eliya, Sri Lanka
-                        <img src="images/map.png" alt="Location">
-                    </a>
+                    Nuwara Eliya, Sri Lanka
+                    <img src="images/map.png" alt="Location">
                 </p>
             </div>
-    
             <div class="contact">
                 <p><img src="images/phone.png" alt="Phone"> +94 123 456 789</p>
                 <p><img src="images/mail.png" alt="Email"> info@hospital.com</p>

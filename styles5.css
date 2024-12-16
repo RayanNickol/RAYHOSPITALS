@@ -68,34 +68,18 @@ header nav ul li a:hover {
         margin-bottom: 10px;
     }
 }
-
 /* Hero Section */
 .hero {
     position: relative;
-    width: calc(100% + 1cm); /* Increase the width by 1cm to move the image to the right */
-    height: 80vh; /* The hero section takes up 80% of the viewport height */
+    width: 100%;
+    height: 80vh; /* Make the hero section take up 80% of the viewport height */
     overflow: hidden;
-    margin-right: -1cm; /* Offset the extra width to keep the image centered */
+    min-width: 1024px; /* Prevent the section from shrinking */
 }
-
 .hero img {
     width: 100%;
-    height: 64%;
+    height: 70%;
     object-fit: cover; /* Ensures the image covers the entire hero section */
-}
-
-.hero-text h2 {
-    margin: 0 0 10px 0; /* Add some space below the heading */
-    color: #fff; /* Set the heading color */
-    font-size: 20px; /* Adjust the heading size */
-    text-align: center; /* Center the heading text */
-}
-
-.hero-text p {
-    margin: 0; /* Reset margin for paragraph */
-    color: #fff; /* Set the paragraph color */
-    font-size: 18px; /* Adjust the paragraph size */
-    text-align: justify; /* Center the paragraph text */
 }
 
 .hero-text {
@@ -103,77 +87,101 @@ header nav ul li a:hover {
     top: 12%; /* Start positioning from the middle */
     right: 2cm; /* Position 2cm to the left from the right edge */
     transform: translateY(-50%) translateY(calc(100% - height / 2)); /* Adjust vertical alignment */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent box */
+    color: #f8f9fa; /* Off-white for contrast */
+    background-color: rgba(34, 34, 34, 0.7); /* Darker transparent box */
     padding: 40px 20px; /* Set the padding */
     border-radius: 5px;
     text-align: center;
     width: 25%; /* Set the width of the box */
     height: auto; /* Adjust height automatically */
     font-size: 1.5em; /* Adjust text size */
-    margin-right: 1000px;
-    margin-top: 40px;
+    margin-right: 26cm;
+    margin-top: 50px;
 }
 
-/* Services Section */
-.services {
+/* Form Section */
+.form-section {
+    background-color: #e7e5e0; /* Light grey background */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 1px;
+    border: 0.5px solid #bfbfbf; /* Light grey border */
+    width: 70%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 40px;
-    margin-bottom: -50px;
+    flex-direction: column;
+    align-items: center;
     min-width: 1024px; /* Prevent the section from shrinking */
-    margin-top: -250px;
-    background-color: #f9f9f9; /* Light gray background */
+    margin-bottom: 60px;
+    margin-top: -150px;
 }
 
-.service-box {
-    width: 28%;
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px; /* Add padding inside the box */
-    border: 1px solid #d1bfa7; /* Light beige border */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
-    background-color: #fafafa; /* Very light gray background */
-}
-
-.service-box h2 {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-
-.service-box p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Registration Button Styles */
-.registration {
+.form-group {
     display: flex;
-    justify-content: flex-end; /* Align the button to the right */
-    padding: 20px 40px;
-    background-color: #f9f9f9; /* Very light gray background for contrast */
-    min-width: 1024px; /* Ensure consistent width */
+    flex-direction: column;
 }
 
-.registration-btn {
-    display: inline-block;
-    background-color: #4e73df; /* Light gray button background */
-    color: #ffffff; /* Darker text color for contrast */
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
+/* Layout for name and image upload */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    min-width: 1024px; /* Prevent the form from shrinking */
+    margin-right: 20px;
+}
+
+form label {
+    margin-bottom: 10px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-right: 16px;
+    color: #333333; /* Dark grey text color */
 }
 
-.registration-btn:hover {
-    background-color: #b0b0b0; /* Slightly darker gray on hover */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bfbfbf; /* Light grey border */
+    border-radius: 4px;
+}
+
+/* Buttons section */
+.form-buttons {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end; /* Align the buttons to the right */
+    gap: 20px;
+}
+
+button[type="submit"], button[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4e73df; /* Blue background for submit button */
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #e74a3b; /* Red background for reset button */
+    margin-right: -20px;
+}
+
+button[type="submit"]:hover, button[type="reset"]:hover {
+    opacity: 0.8;
 }
 
 
+#profile-picture {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#preview-image {
+    width: 100px; /* Set a fixed width for the preview image */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
 
 /* Footer Styles */
 footer {

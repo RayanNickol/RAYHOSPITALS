@@ -1,312 +1,5 @@
-
-/*aboutus page*/
 body {
-    min-width: 1024px; /* Set the minimum width to prevent the layout from shrinking */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: -100px; /* To ensure content is not hidden under the fixed header */
-    background-color: #f4f4f4; 
-}
-
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px; 
-    background-color: #e4f0fa;
-    position: fixed;
-    top: 0;
-    width: 100%; 
-    z-index: 1000; 
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    min-width: 1024px; /* Prevents the header from shrinking below 1024p\\x */
-    margin-top: 5px;
-}
-
-
-header .logo img {
-    height: 60px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; 
-    min-width: 1024px; /* Prevents the navigation menu from shrinking below 1024px */
-}
-
-header nav ul li {
-    margin-left: 10px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #2e86ab; 
-    font-weight: bold;
-    padding: 10px 24px; /* Adjust padding for better fit */
-}
-
-header nav ul li a:hover {
-    border-bottom: 2px solid #2e86ab;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    width: calc(100% + 1cm); /* Increase the width by 1cm to move the image to the right */
-    height: 80vh; 
-    overflow: hidden;
-    margin-right: -1cm; 
-}
-
-.hero img {
-    width: 100%;
-    height: 60%;
-    object-fit: cover; 
-    margin-top: -70px;
-}
-
-.hero-text h2 {
-    margin: 0 0 10px 0; 
-    color: #ffffff; 
-    font-size: 20px; 
-    text-align: center; 
-}
-
-.hero-text p {
-    margin: 0; 
-    color: #ffffff; 
-    font-size: 18px; 
-    text-align: justify; 
-}
-
-.hero-text {
-    position: absolute;
-    top: 12%; 
-    right: 2cm; 
-    transform: translateY(-50%) translateY(calc(100% - height / 2)); /* Adjust vertical alignment */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4); /* Transparent box */
-    padding: 40px 20px; 
-    border-radius: 5px;
-    text-align: center;
-    width: 25%; 
-    height: auto; 
-    font-size: 1.5em; 
-    backdrop-filter: blur(8px); 
-}
-
-/* Description Section */
-.description {
-    display: flex;
-    padding: 50px;
-    background-color: #d5ebff; 
-    padding-bottom: 245px; 
-    margin-top: -330px;
-}
-
-.description .content {
-    flex: 1;
-    padding-right: 20px;
-    padding-bottom: 30px; 
-    margin-bottom: -208px;
-}
-
-.description .content h2 {
-    font-size: 28px;
-    margin-top: 50px;
-    color: #2e86ab; 
-}
-
-.description .content p {
-    font-size: 21px;
-    line-height: 1.5;
-    margin-bottom: 30px; 
-    text-align: justify; 
-    padding-right: 1cm;
-    margin-top: 30px;
-    color: #6a737d; 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.description .image {
-    flex: 1;
-    overflow: hidden;
-}
-
-.description .image img {
-    width: 100%; 
-    height: 50%; 
-    margin-bottom: -3px;
-    padding-left: 0; 
-    padding-right: 0; 
-    position: absolute; 
-    right: 0; 
-    object-fit: cover; 
-    transform: translateX(50%); /* Adjust the image to stretch towards the center */
-}
-
-/* Branches Section */
-.branches {
-    display: flex;
-    flex-direction: column; /* Stack branches vertically */
-    padding: 50px;
-    background-color: #f6f5ef; /* Soft light gray */
-    text-align: center; /* Center align the section heading */
-}
-
-.section-heading {
-    font-size: 36px; 
-    margin-bottom: 50px; 
-    margin-top: 20px;
-    color: #4682b4;
-}
-
-.branch {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    margin-bottom: 30px; 
-}
-
-.branch .content {
-    flex: 1;
-    padding-right: 20px;
-    text-align: left; 
-    color: #5f6a6a; 
-}
-
-.branch h2 {
-    font-size: 26px;
-    margin-bottom: 75px;
-    color: #2e86ab; 
-}
-
-.branch p {
-    font-size: 20px;
-    line-height: 0.8cm;
-    margin-top: -50px;
-    text-align: justify;
-    color: #6b7280; 
-}
-
-.branch .map-container {
-    flex: 1;
-    width: 100%;
-    height: 300px; 
-    border-radius: 10px; 
-    overflow: hidden;
-    margin-left: 20px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.branch .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 10px; 
-}
-
-
-/* Summary Table Section */
-.summary {
-    padding: 50px;
-    background-color: #f8f9fa; 
-    margin-left: -50px;
-    margin-right: -20px;
-}
-
-.summary table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff; 
-    margin-left: 15px;
-
-    
-}
-
-.summary table th,
-.summary table td {
-    border: 1px solid #dcdcdc; 
-    padding: 10px;
-    text-align: center;
-    color: #5a5a5a; 
-    font-size: 20px;
-}
-
-.summary table th {
-    background-color: #f8f9fa; 
-    font-weight: bold;
-    color: #3b5998; 
-    text-align: center;
-}
-
-
-/* Footer Styles */
-footer {
-    background-color: #e4f0fa; 
-    padding: 20px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .logo img {
-    width: 150px;
-    height: 65px;
-}
-
-footer .social-media img {
-    width: 24px;
-    margin: 5px;
-}
-
-footer .address, footer .contact {
-    text-align: left;
-}
-
-footer .address img, footer .contact img {
-    width: 16px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-
-
-
-
-
-/*Services*/
-body {
-    min-width: 1024px; /* Set the minimum width to prevent the layout from shrinking */
+    min-width: 1024px; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -321,17 +14,16 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 15px; 
-    background-color: #e4f0fa; 
+    background-color: #e4f0fa;
     position: fixed; 
     top: 0;
     width: 100%; 
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+    z-index: 1000; 
+    backdrop-filter: blur(5px); 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    min-width: 1024px; /* Prevents the header from shrinking below 1024px */
+    min-width: 1024px;
     margin-top: 5px;
 }
-
 
 header .logo img {
     height: 60px;
@@ -342,8 +34,8 @@ header nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
-    min-width: 1024px; /* Prevents the navigation menu from shrinking below 1024px */
+    flex-wrap: wrap; 
+    min-width: 1024px; 
 }
 
 header nav ul li {
@@ -358,562 +50,144 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    border-bottom: 2px solid #2e86ab;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    width: calc(100% + 1cm); /* Increase the width by 1cm to move the image to the right */
-    height: 80vh; 
-    overflow: hidden;
-    margin-right: -1cm;
-}
-
-.hero img {
-    width: 100%;
-    height: 64%;
-    object-fit: cover; /* Ensures the image covers the entire hero section */
-}
-
-.hero-text h2 {
-    margin: 0 0 10px 0; 
-    color: #fff; 
-    font-size: 20px; 
-    text-align: center; 
-}
-
-.hero-text p {
-    margin: 0; 
-    color: #fff; 
-    font-size: 18px; 
-    text-align: justify; 
-}
-
-.hero-text {
-    position: absolute;
-    top: 12%; /* Start positioning from the middle */
-    right: 2cm; 
-    transform: translateY(-50%) translateY(calc(100% - height / 2)); /* Adjust vertical alignment */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent box */
-    padding: 40px 20px; 
-    border-radius: 5px;
-    text-align: center;
-    width: 25%; /* Set the width of the box */
-    height: auto; 
-    font-size: 1.5em; 
-    margin-right: 1000px;
-    margin-top: 40px;
-}
-
-/* Services Section */
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 40px;
-    margin-bottom: -50px;
-    min-width: 1024px; /* Prevent the section from shrinking */
-    margin-top: -250px;
-    background-color: #f9f9f9;
-}
-
-.service-box {
-    width: 28%;
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px; 
-    border: 1px solid #d1bfa7; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-    background-color: #fafafa; 
-    margin-top: 50px;
-}
-
-.service-box h2 {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-
-.service-box p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Registration Button Styles */
-.registration {
-    display: flex;
-    justify-content: flex-end; 
-    padding: 20px 40px;
-    background-color: #f9f9f9; 
-    min-width: 1024px; /* Ensure consistent width */
-    margin-bottom: -35px;
-}
-
-.registration-btn {
-    display: inline-block;
-    background-color: #4e73df; 
-    color: #ffffff; 
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-right: 20px;
-}
-
-.registration-btn:hover {
-    background-color: #b0b0b0;
-}
-
-
-
-/* Footer Styles */
-footer {
-    background-color: #e4f0fa; 
-    padding: 20px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .logo img {
-    width: 150px;
-    height: 65px;
-}
-
-footer .social-media img {
-    width: 24px;
-    margin: 5px;
-}
-
-footer .address, footer .contact {
-    text-align: left;
-}
-
-footer .address img, footer .contact img {
-    width: 16px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-
-
-
-/*Healthtips*/
-body {
-    min-width: 1024px; /* Set the minimum width to prevent the layout from shrinking */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 100px; /* To ensure content is not hidden under the fixed header */
-    background-color: #f4f4f4; 
-}
-
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px; 
-    background-color: #e4f0fa;
-    position: fixed;
-    top: 0;
-    width: 100%; 
-    z-index: 1000; 
-    backdrop-filter: blur(5px); 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    min-width: 1024px;
-    margin-top: 5px;
-}
-
-
-header .logo img {
-    height: 60px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
-    min-width: 1024px; /* Prevents the navigation menu from shrinking below 1024px */
-}
-
-header nav ul li {
-    margin-left: 10px; /* Reduced margin for more space */
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #2e86ab; 
-    font-weight: bold;
-    padding: 10px 24px;
-}
-
-header nav ul li a:hover {
     border-bottom: 2px solid #2e86ab; 
 }
 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}
-
 /* Hero Section */
 .hero {
     position: relative;
-    width: calc(100% + 1cm); /* Increase the width by 1cm to move the image to the right */
-    height: 80vh; /* The hero section takes up 80% of the viewport height */
+    width: 100%;
+    height: 80vh; 
     overflow: hidden;
-    margin-right: -1cm; /* Offset the extra width to keep the image centered */
+    min-width: 1024px; 
 }
 
 .hero img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover; 
-}
-
-.hero-text h2 {
-    margin: 0 0 10px 0; 
-    color: #fff;
-    font-size: 20px; 
-    text-align: center; 
-}
-
-.hero-text p {
-    margin: 0; 
-    color: #fff; 
-    font-size: 18px; 
-    text-align: justify; 
-}
-
-.hero-text {
-    position: absolute;
-    top: 12%; /* Start positioning from the middle */
-    right: 2cm; 
-    transform: translateY(-50%) translateY(calc(100% - height / 2)); /* Adjust vertical alignment */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 40px 20px; 
-    border-radius: 5px;
-    text-align: center;
-    width: 25%;
-    height: auto;
-    font-size: 1.5em;
-    margin-right: 1000px;
-    margin-top: 40px;
-}
-
-/* Services Section */
-.services {
-    padding: 50px 20px;
-    margin-top: -330px;
-    background-color: #f9f9f9; 
-}
-
-.services h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 30px;
-    margin-bottom: 20px; 
-    color: #333; 
-}
-
-.service-block {
-    display: flex;
-    flex-direction: column; 
-    gap: 40px;
-}
-
-.service-item {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    align-items: flex-start;
-    background-color: #ffffff; 
-    border: 1px solid #ddd; 
-    padding: 20px; 
-}
-
-.service-item img {
-    width: 50%; 
-    height: auto; 
-    margin-right: 20px;
-    object-fit: cover;
-}
-
-.service-description {
-    flex-grow: 1;
-    padding-left: 20px;
-    width: 50%;
-    margin-top: 0; 
-}
-
-.service-description h3 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #2c3e50; 
-}
-
-.service-description p {
-    text-align: justify;
-    font-size: 21px; 
-    margin-top: 25px;
-    line-height: 2; /* Improve readability by increasing line spacing */
-    color: #666; 
-}
-
-/* Image & Paragraph Section */
-.image-para {
-    display: flex;
-    width: 100vw; /* Fullscreen width */
-    height: 50vh; /* Half the screen's height */
-    box-sizing: border-box;
-    background-color: #e8eaf6; 
-}
-
-.text-block {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 20px; /* Adding some padding for readability */
-    box-sizing: border-box;
-    background-color: #f5f5f5; 
-    color: #333; 
-}
-
-.text-block p {
-    font-size: 44px; /* Adjust text size */
-    margin-bottom: 15px;
-    font-style: initial;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-}
-
-.image-block {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
-    background-color: #b0bec5; 
-}
-
-.image-block img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
 }
 
-
-/* Footer Styles */
-footer {
-    background-color: #e4f0fa; 
-    padding: 20px;
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%;
+    font-size: 1.5em; 
 }
 
-.footer-container {
+/* Image and Text Section */
+.image-text {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 40px 20px; 
+    min-height: 60vh; 
+    min-width: 1024px; 
+    background-color: #f9f9f9; 
 }
 
-footer .logo img {
-    width: 150px;
-    height: 65px;
+.image-text img {
+    max-width: 50%;
+    border-radius: 0px;
+    margin-right: 20px;
+    object-fit: cover; 
+    height: 100%; 
 }
 
-footer .social-media img {
-    width: 24px;
-    margin: 5px;
-}
-
-footer .address, footer .contact {
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
+    padding: 0 20px; 
 }
 
-footer .address img, footer .contact img {
-    width: 16px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-
-
- 
-/*Doctors page*/
-body {
-    min-width: 1024px; /* Set the minimum width to prevent the layout from shrinking */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 100px; 
-    background-color: #f4f4f4; 
-}
-
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px;
-    background-color: #e4f0fa; 
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Ensures the header stays on top */
-    backdrop-filter: blur(5px); 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    min-width: 1024px; /* Prevents the header from shrinking below 1024px */
-    margin-top: 5px;
-}
-
-
-header .logo img {
-    height: 60px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    min-width: 1024px; /* Prevents the navigation menu from shrinking below 1024px */
-}
-
-header nav ul li {
-    margin-left: 10px; /* Reduced margin for more space */
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #2e86ab;
-    font-weight: bold;
-    padding: 10px 24px;
-}
-
-header nav ul li a:hover {
-    border-bottom: 2px solid #2e86ab; 
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}
-/* Main Topic Section */
-.main-topic {
-    text-align: center; 
-    padding: 20px; 
-    background-color: #f4f4f4; 
-}
-
-.main-topic h1 {
-    margin: 0; 
-    font-size: 24px;
+.text-content h2 {
+    font-size: 32px; 
+    margin-bottom: 15px;
+    text-align: center;
     color: #2e86ab; 
 }
 
-/* Doctors Section */
-.doctors {
+.text-content p {
+    font-size: 18px; 
+    color: #555; 
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Lists Section */
+.lists {
     display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: center; 
-}
-
-.doctor-card {
-    display: flex;
-    background-color: #c3dfe5;
-    border: 1px solid #ddd; 
-    border-radius: 8px; /* Rounded corners for the card */
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for card depth */
-    width: calc(50% - 40px); /* Adjust width to fit two cards per row with gap */
-    box-sizing: border-box; 
-    margin-bottom: 20px; /* Space below each card */
-}
-
-.doctor-img {
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 50%;
-    border: 2px solid #ddd; 
-}
-
-.doctor-info h3 {
-    margin-top: 0;
-    margin-left: 0.5cm;
+    justify-content: space-between;
+    padding: 20px;
     margin-bottom: 10px;
-    font-size: 20px;
-    color: #2c3e50;
+    min-width: 1024px; 
+    background-color: #e8f4f8; 
 }
 
-.doctor-info p {
-    margin: 4px 0;
-    margin-left: 0.5cm;
+.list-item {
+    width: 47%;
+}
+
+.list-item h3 {
+    font-size: 27px;
+    margin-bottom: 24px;
+    margin-left: 70px;
+    color: #2e86ab; 
+}
+
+.list-item ol,
+.list-item ul {
+    padding-left: 20px;
     font-size: 18px;
     color: #555; 
+    margin-left: 70px;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10px; 
+    background-color: #f4f4f4; 
+    min-width: 1024px; 
+}
+
+.gallery-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 0px;
+    margin-bottom: 20px; 
+}
+
+.gallery-item p {
+    font-size: 16px;
+    color: #555; 
+    padding: 0 10px; 
+    text-align: justify;
+    font-size: 20px;
+}
 
 /* Footer Styles */
 footer {
     background-color: #e4f0fa; 
     padding: 20px;
-    margin-top: 40px;
 }
 
 .footer-container {
@@ -946,4 +220,3 @@ footer .address img, footer .contact img {
 footer p {
     margin: 5px 0;
 }
-

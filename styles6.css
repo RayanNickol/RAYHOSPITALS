@@ -1,0 +1,309 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Add space between navigation bar and content */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff; /* White background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #00bcd4; /* Cyan text */
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #00bcd4; /* Cyan background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #00bcd4; /* Cyan background */
+    color: #fff; /* White text */
+    padding: 100px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Service Boxes Section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.service-box {
+    background-color: #fff;
+    width: calc(33.333% - 20px); /* Three boxes per row with 20px gap */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.service-box .icon {
+    font-size: 2.5em;
+    color: #00bcd4; /* Cyan icons */
+    margin-bottom: 10px;
+}
+
+.service-box h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.service-box p {
+    color: #666;
+}
+
+/* Informational Section */
+.info-section {
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    text-align: center;
+    width: 100%;
+}
+
+.info-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-section p {
+    color: #666;
+}
+
+/* Medicine Categories */
+#categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+#category, #category1, #category2, #category3, #category4{
+    background-color: #00bcd4; /* Cyan background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#category:hover,#category1:hover, #category2:hover, #category3:hover, #category4:hover {
+    background-color: #008c9e; /* Darker cyan on hover */
+    transform: scale(1.05);
+}
+
+/* Medicine List and Quantity Selection */
+.medicine-table {
+    padding: 20px;
+    text-align: center; /* Center the content */
+    width: 100%;
+    max-width: 1200px;
+}
+
+.medicine-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* Add gap between elements */
+}
+
+.medicine-row span {
+    flex: 1;
+    font-size: 1.1em;
+}
+
+.medicine-row input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* Rounder edges */
+    text-align: center;
+    margin-right: 10px; /* Add margin to separate inputs */
+}
+
+.medicine-row button {
+    background-color: #00bcd4; /* Cyan button */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounder edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Add margin to separate buttons */
+}
+
+.medicine-row button:hover {
+    background-color: #008c9e; /* Darker cyan on hover */
+}
+
+/* Summary Table */
+.summary {
+    padding: 20px;
+    text-align: center; /* Center the content */
+    width: 100%;
+    max-width: 1200px;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #00bcd4; /* Cyan background */
+    color: #fff; /* White text */
+}
+
+table td button {
+    background-color: #e74c3c; /* Red button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px; /* Rounder edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+#total-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+button {
+    background-color: #ffffff; /* Cyan button */
+    color: #000000; /* White text */
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 68, 68);
+    border-radius: 25px; /* Rounder edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #8a8a8a; /* Darker cyan on hover */
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #e4f0fa;
+    padding: 20px;
+    margin-bottom: -2100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .logo img {
+    width: 150px;
+    height: 65px;
+}
+
+footer .social-media img {
+    width: 24px;
+    margin: 5px;
+}
+
+footer .address, footer .contact {
+    text-align: left;
+}
+
+footer .address img, footer .contact img {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+footer p {
+    margin: 5px 0;
+}
